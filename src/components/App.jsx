@@ -11,7 +11,7 @@ state = {
 
 componentDidMount() {
   const stringifiedContacts = localStorage.getItem('contact');
-  const parsedContacts = JSON.parse(stringifiedContacts ?? []);
+  const parsedContacts = JSON.parse(stringifiedContacts) ?? [];
   this.setState({
     contacts: parsedContacts,
   })
